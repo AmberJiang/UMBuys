@@ -1,3 +1,9 @@
+  /**
+   * Date: 8/22/2020
+   * Description: Nav component class
+   * Author: Yiwei Yao
+  */
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
