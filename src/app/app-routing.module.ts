@@ -6,14 +6,15 @@
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
     // TODO: when path is '' need to redirectTo to welcome page
     // Yiwei Yao
-    { path: '', redirectTo: '/', pathMatch: 'full' },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'error', component: ErrorComponent },
+    { path: 'home', component: HomeComponent }
 ];
 
 @NgModule({
