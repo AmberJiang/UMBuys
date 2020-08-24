@@ -3,18 +3,18 @@
    * Description: app module component class
    * Author: Auto Generated
   */
- 
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { NavComponent } from './nav/nav.component';
+import { NavComponent } from 'src/app/components/nav/nav.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ErrorComponent } from './error/error.component';
-import { HomeComponent } from './home/home.component';
-import { LocationComponent } from './home/location/location.component';
-import { GalleryComponent } from './home/gallery/gallery.component';
-import { CategoryComponent } from './home/category/category.component';
+import { ErrorComponent } from 'src/app/components/error/error.component';
+import { HomeComponent } from 'src/app/components/home/home.component';
+import { LocationComponent } from 'src/app/components/home/location/location.component';
+import { GalleryComponent } from 'src/app/components/home/gallery/gallery.component';
+import { CategoryComponent } from 'src/app/components/home/category/category.component';
 
 @NgModule({
   declarations: [

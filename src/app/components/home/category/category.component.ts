@@ -4,8 +4,7 @@
    * Author: Nanyan Jiang
   */
 import { Component, OnInit } from '@angular/core';
-
-import { Category } from '../../models/category';
+import { Category } from 'src/app/models/category';
 
 @Component({
   selector: 'app-category',
