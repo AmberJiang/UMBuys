@@ -2,4 +2,17 @@
      Description: Gallery commponent html
      Author: Nanyan Jiang
  -->
-<p>gallery works!</p>
+  <div class="title-mid">
+    <p class="font-weight-bold">Explore Popular Items</p>
+  </div>
+  <div class="row">
+    <!-- delete card-spacing class yiweiyao-->
+    <div class="col-3 col-sm-3 col-md-2 col-lg-2" *ngFor="let item of itemArr" style="border:none;">
+      <img class="img-fixed-size rounded" src="{{item.photos[0].path}}">
+      <div>
+        <p class="font-weight-bold">{{item.title}}</p>
+        <p>{{item.price | currency}}</p>
+      </div>
+    </div>
+  </div>
+
