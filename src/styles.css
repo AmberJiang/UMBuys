@@ -1,4 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-.robotMono {
+/* .robotMono {
+    font-family: 'Roboto Mono', monospace;
+}
+body{
+    font-family: 'Roboto Mono', monospace;
+} */
+
+/* Make Roboto mono font apply to all */
+* {
     font-family: 'Roboto Mono', monospace;
 }
