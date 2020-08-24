@@ -1,21 +1,95 @@
 <!-- Date: 8/22/2020
      Description: Nav commponent html
      Author: Yiwei Yao
+     Date: 8/23/2020
+     Description: integrate search&location into nav && make nav bar sticky at top
+     editor: Yiwei Yao
  -->
-<nav class="navbar navbar-light bg-light">
-    <div class="float-left">
-        <span class="navbar-brand  h1 robotMono">UMBuys</span>
-    </div>
-    <div class = "float-right">
-        <a id="lang" href="/" class="mr-5">
-            <svg class="bi" width="20" height="20" fill="currentColor">
-                <use xlink:href="assets/bootstrap-icons.svg#globe"/>
-            </svg>
-        </a>
-        <a id="chat" href="/" class="ml-2"><svg class="bi" width="20" height="20" fill="currentColor">
-        <use xlink:href="assets/bootstrap-icons.svg#chat-dots-fill"/>
-        </svg></a>
-        <button class="btn btn-sm btn-outline-primary ml-2" type="button">Login</button>
-        <button class="btn btn-sm btn-primary ml-2" type="button">Register</button>
+
+ <!-- below is nav bar code  -->
+ <nav class="bg-white sticky-top shadow-sm">
+   <div class="container">
+     <div class="row">
+         <div class="col-auto justify-content-start mt-2">
+             <span><h2>UMBuys</h2></span>
+         </div>
+         <div class="col-auto mt-2 mr-auto mx-auto">
+            <form>
+                <div class="input-group" style="width: 125%;">
+                    <input type="text" class="form-control mr-2 rounded-pill text-center" placeholder="Search" aria-label="search">
+                    <button type="submit" class="btn btn-primary rounded-pill text-center">                <svg class="bi" width="20" height="20" fill="currentColor">
+                        <use xlink:href="assets/bootstrap-icons.svg#search"/>
+                    </svg></button>
+                </div>
+            </form>
+            <div class="d-block text-center">
+                Change Address: 
+                <button type="button" class="btn btn-link text-success" data-toggle="modal" data-target="#changeLocation">Quincy, MA, 02171</button>
+            </div>
+        </div>
+        
+        <div class="col-auto mt-2 justify-content-end">
+            <div class="float-right">
+            <a id="lang" href="/">
+                <svg class="bi text-primary" width="20" height="20">
+                    <use xlink:href="assets/bootstrap-icons.svg#globe"/>
+                </svg>
+            </a>
+            <a id="chat" href="/" class="ml-2"><svg class="bi text-primary" width="20" height="20">
+            <use xlink:href="assets/bootstrap-icons.svg#chat-dots-fill"/>
+            </svg></a>
+            <button class="btn btn-sm btn-outline-primary ml-2" type="button">Login</button>
+            <button class="btn btn-sm btn-primary ml-2" type="button">Join</button>
+        </div>
+        </div>
+     </div>
     </div>
 </nav>
+<!-- end for nav bar-->
+
+
+<!-- below is a pop up modal to change location-->
+<div class="modal fade" id="changeLocation" tabindex="-1" aria-labelledby="changeLocation" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="change_location_title">Change Location</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form>
+              <div class="row"><div class="form-group col-auto">
+                  <label for="locationInputLabel">Cities, States, Zip code</label>
+                  <input type="text" class="form-control" id="locationInput">
+                </div>
+                <div class="form-group col-auto">
+                  <label for="RadiusInputLabel">Radius</label>
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">200 Miles</button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">5 Miles</a>
+                      <a class="dropdown-item" href="#">10 Miles</a>
+                      <a class="dropdown-item" href="#">20 Miles</a>
+                      <a class="dropdown-item" href="#">40 Miles</a>
+                      <a class="dropdown-item" href="#">60 Miles</a>
+                      <a class="dropdown-item" href="#">80 Miles</a>
+                      <a class="dropdown-item" href="#">100 Miles</a>
+                      <a class="dropdown-item" href="#">250 Miles</a>
+                      <a class="dropdown-item" href="#">500 Miles</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style="border-style: solid;">Left for open street map</div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end for change location pop up modal -->
