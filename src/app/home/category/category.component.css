@@ -2,4 +2,19 @@
    * Date: 8/22/2020
    * Description: Catergory component css
    * Author: Nanyan Jiang
+   * Date: 8/23/2020
+   * Description: add more css
+   * editor: yiwei yao
   */
+.category_header{
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.category_body{
+  padding:25px;
+}
+.category_btn{
+  height:30px;
+  width :150px;
+}

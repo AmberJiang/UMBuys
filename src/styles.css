@@ -10,9 +10,6 @@ body{
 * {
     font-family: 'Roboto Mono', monospace;
 }
-.card-spacing{
-  margin: 1px;
-}
 
 .img-fixed-size{
   max-height: 80%;
