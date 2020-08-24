@@ -6,8 +6,8 @@
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { ErrorComponent } from './error/error.component';
+import { HomeComponent } from 'src/app/components/home/home.component';
+import { ErrorComponent } from 'src/app/components/error/error.component';
 
 const routes: Routes = [
     // TODO: when path is '' need to redirectTo to welcome page
