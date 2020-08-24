@@ -10,3 +10,14 @@ body{
 * {
     font-family: 'Roboto Mono', monospace;
 }
+.card-spacing{
+  margin: 1px;
+}
+
+.img-fixed-size{
+  max-height: 80%;
+  max-width: 100%;
+  min-height: 220px;
+  min-width: 100%;
+  display: block;
+}
