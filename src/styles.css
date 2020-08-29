@@ -18,3 +18,7 @@ body{
   min-width: 100%;
   display: block;
 }
+.img-clickable:hover{
+  opacity: 0.8;
+  background-color: aquamarine;
+}
