@@ -23,11 +23,11 @@
                 </div>
             </form>
             <div class="d-block text-center">
-                Change Address: 
+                Change Address:
                 <button type="button" class="btn btn-link text-success" data-toggle="modal" data-target="#changeLocation">Quincy, MA, 02171</button>
             </div>
         </div>
-        
+
         <div class="col-auto mt-2 justify-content-end">
             <div class="float-right">
             <a id="lang" href="/">
@@ -38,8 +38,8 @@
             <a id="chat" href="/" class="ml-2"><svg class="bi text-primary" width="20" height="20">
             <use xlink:href="assets/bootstrap-icons.svg#chat-dots-fill"/>
             </svg></a>
-            <button class="btn btn-sm btn-outline-primary ml-2" type="button">Login</button>
-            <button class="btn btn-sm btn-primary ml-2" type="button">Join</button>
+            <button class="btn btn-sm btn-outline-primary ml-2" type="button" data-toggle="modal" data-target="#login">Login</button>
+            <button class="btn btn-sm btn-primary ml-2" type="button" data-toggle="modal" data-target="#join" >Join</button>
         </div>
         </div>
      </div>
@@ -93,3 +93,74 @@
   </div>
 </div>
 <!-- end for change location pop up modal -->
+
+<!-- below is a pop up modal for login -->
+<div class="modal fade" id="login" tabindex="-1" aria-labelledby="login" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of the popup modal for login  -->
+
+<!-- below is a pop up modal for join -->
+<div class="modal fade" id="join" tabindex="-1" aria-labelledby="join" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Join UMBuys</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Enter Password Again</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Join</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of the popup modal for join  -->
