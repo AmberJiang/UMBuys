@@ -22,3 +22,15 @@ body{
   opacity: 0.8;
   background-color: aquamarine;
 }
+
+.hr.style-1 {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.carousel-img-size{
+  max-height: 800px;
+  max-width: 800px;
+}
