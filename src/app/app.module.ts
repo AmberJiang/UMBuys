@@ -15,6 +15,7 @@ import { HomeComponent } from 'src/app/components/home/home.component';
 import { LocationComponent } from 'src/app/components/home/location/location.component';
 import { GalleryComponent } from 'src/app/components/home/gallery/gallery.component';
 import { CategoryComponent } from 'src/app/components/home/category/category.component';
+import { DetailComponent } from './components/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CategoryComponent } from 'src/app/components/home/category/category.com
     HomeComponent,
     LocationComponent,
     GalleryComponent,
-    CategoryComponent
+    CategoryComponent,
+    DetailComponent
   ],
   imports: [
     AppRoutingModule,

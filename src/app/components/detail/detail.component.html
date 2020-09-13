@@ -1,0 +1,74 @@
+<!-- * Date: 8/30/2020
+* Description: Detail component class
+* Author: Nanyan Jiang
+-->
+<div class="container">
+  <button class="btn" routerLink="/home">Back To Home</button>
+    <div class="row">
+      <!-- photo carousel start-->
+      <div class="col">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item" *ngFor="let image of item.photos; let i = index" [ngClass]="{'active' : i == 0}">
+              <img class="d-block w-100 carousel-img-size" [src]="image.path" alt="First slide">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <!-- photo carousel end-->
+      <div class="col col-lg-3 col-sm-2">
+        <h4 class="font-weight-bold">{{item.title}}</h4>
+        <p>{{item.price | currency}}</p>
+        <a class="link">{{item.category.name}}</a>
+        <!-- todo:this category name tag should be linking to the page with this category -->
+        <!-- item's detail -->
+        <h5 class="font-weight-bold">Details</h5>
+        <div class="row">
+          <div class="col">
+              Condition
+          </div>
+          <div class="col">
+            <p>{{item.condition.conditionDescription}}</p>
+          </div>
+        </div>
+        <hr class="hr.style-1">
+        <div class="row">
+          <div class="col">
+            Brand
+          </div>
+          <div class="col">
+            <p>{{item.brand}}</p>
+          </div>
+        </div>
+         <!-- item's detail end-->
+        <!-- seller's detail -->
+        <h5 class="font-weight-bold">Seller Information</h5>
+        <div class="row">
+          <div class="col">
+            Sellder
+          </div>
+          <div class="col">
+            <p>{{item.seller.name}}</p>
+          </div>
+        </div>
+        <hr class="hr.style-1">
+        <div class="row">
+          <div class="col">
+            Email Seller
+          </div>
+          <div class="col">
+            <a class="link" data-toggle="tooltip" data-placement="bottom" title="Click to email the seller for this item." (click)='emailTo()'>{{item.seller.email}}</a>
+          </div>
+        </div>
+        <!-- seller's detail end -->
+      </div>
+    </div>
+</div>
