@@ -7,9 +7,9 @@ body{
 } */
 
 /* Make Roboto mono font apply to all */
-* {
+/* * {
     font-family: 'Roboto Mono', monospace;
-}
+} */
 
 .img-fixed-size{
   height: 160px;
@@ -32,3 +32,69 @@ body{
   max-height: 800px;
   max-width: 800px;
 }
+
+/* Add by Yiwei Yao improve bootstrap responsive for large screen 9/13/2020 */
+/* start */
+@media (min-width: 1420px) {
+  .container {
+    max-width: 1380px !important;
+  }
+}
+@media (min-width: 1580px) {
+  .container {
+    max-width: 1560px !important;
+  }
+}
+
+@media (min-width: 1900px) {
+  .container {
+    max-width: 1800px !important;
+  }
+}
+
+@media (min-width: 250px) {
+  .container {
+    max-width: 95%;
+  }
+}
+/* end */
+
+/* color */
+/* start */
+body {
+  background-color: #f1f2f6 !important;
+}
+.primary-color {
+  color: #3742fa;
+}
+.primary-color-var{
+  color:#5352ed;
+}
+.secondry-color {
+  color: #f39c12;
+}
+.secondry-color-var {
+  color: #f1c40f;
+}
+.bg-color {
+  background-color: #ffffff;
+}
+.error-color {
+  color: #d63031;
+}
+.upon-primary-color {
+  color: #ffffff;
+}
+.upon-secondry-color {
+  color: #ffffff;
+}
+.upon-bg-color {
+  color: #000000;
+}
+.upon-surface-color {
+  color: #000000;
+}
+.upon-error-color {
+  color:#ffffff;
+}
+/* end */
